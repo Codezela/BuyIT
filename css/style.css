@@ -88,7 +88,6 @@ header a{
 	padding: 10px 20px;
 	text-decoration: none;
 	display: inline-block;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 1px 1px rgba(0,0,0,0.24);
 	font-weight: bold;
     border-radius: 5px;
 }
@@ -98,12 +97,14 @@ header a:nth-of-type(1){
 	background-color: var(--Light-Green);
 	color: white;
 	border: 3px solid var(--Light-Green);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s ease-in-out;
 }
 header a:nth-of-type(2){
 	background-color: transparent;
 	color: #6d6d6d;
 	border: 3px solid #e6e6e6;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s ease-in-out;
 }
 header a:nth-of-type(1):hover{
@@ -118,46 +119,56 @@ header a:nth-of-type(2):hover{
 	border: 3px solid var(--Light-Green);
 	transition: all 0.3s ease-in-out;
 }
-.section-features{
+section.features{
 	margin: 0px auto;
 	text-align: center;
 }
-.section-features p{
+section.features p{
 	font-size: 14px;
 }
-.section-features .cards{
+section.features .cards{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	margin: 100px 50px;
 }
-.section-features .cards .card{
+section.features .cards .card{
+	background-color: #F4F4F4;
 	padding: 50px 10px;
 	border-radius: 5px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
-.section-features .cards .card:hover{
+section.features .card:hover{
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
-.section-features .cards .card i{
-	padding: 30px 30px;
+section.features .cards .card i{
+	padding: 20px;
 	background-color: var(--Light-Green);
 	border-radius: 50%;
 	color: white;
 	font-size: 25px;
-	transition: all 0.3s ease-in-out;
+	border: 3px solid var(--Light-Green);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	transition: all 500ms ease-in-out;
 }
-.section-features .cards .card h3{
+section.features .cards .card:hover > i{
+	background-color: transparent;
+	color: #6d6d6d;
+	border: 3px solid #e6e6e6;
+	transform: scale(1.2);
+	transition: all 500ms ease-in-out;
+}
+section.features .cards .card h3{
 	padding: 20px 0px;
 }
-.section-features .cards .card p{
+section.features .cards .card p{
 	width: 250px;
 	font-size: 14px;
 	text-align: center;
 }
-.section-features .cards .card a{
+section.features .cards .card a{
 	width: auto;
 	padding: 10px 20px;
 	margin-top: 20px;
@@ -165,18 +176,18 @@ header a:nth-of-type(2):hover{
 	display: inline-block;
 	font-weight: bold;
 	border-radius: 5px;
-	border: 3px solid #d4d2d2;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 1px 1px rgba(0,0,0,0.24);
 	color: #6d6d6d;
+	border: 3px solid #e6e6e6;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s ease-in-out;
 }
-.section-features .cards .card a:hover{
+section.features .cards .card a:hover{
 	background-color: var(--Light-Green);
 	color: white;
 	border: 3px solid var(--Light-Green);
 	transition: all 0.3s ease-in-out;
 }
-.section-offers{
+section.offers{
 	background-image: url(../images/mobile-app.jpg);
 	background-color: #f5f5f5;
 	background-size: contain;
@@ -185,112 +196,121 @@ header a:nth-of-type(2):hover{
 	width: 100%;
 	height: 600px;
 }
-.section-offers h2{
+section.offers h2{
 	padding-top: 125px;
 	padding-left: 150px;
 	width: 400px;
 	clear: both;
 }
-.section-offers p{
+section.offers p{
 	width: 400px;
 	padding-left: 150px;
 	margin-bottom: 25px;
 	font-size: 14px;
 }
-.section-offers p:nth-child(3){
+section.offers p:nth-child(3){
 	font-size: 12px;
 }
-.section-offers .cta{
+section.offers .cta{
 	width: 650px;
 	text-align: center;
 }
-.section-offers a{
+section.offers a{
 	width: 175px;
 	height: 57px;
 	display: inline-block;
 }
-.section-offers .cta a:nth-of-type(1){
+section.offers .cta a:nth-of-type(1){
 	background-image: url(../images/app-store.png);
 	background-repeat: no-repeat;
 	transition: all 0.3s ease-in-out;
 }
-.section-offers .cta a:nth-of-type(2){
+section.offers .cta a:nth-of-type(2){
 	background-image: url(../images/play-store.png);
 	background-repeat: no-repeat;
 	transition: all 0.3s ease-in-out;
 }
-.section-offers .cta a:nth-of-type(1):hover{
+section.offers .cta a:nth-of-type(1):hover{
 	background-image: url(../images/app-store-green.png);
 	background-repeat: no-repeat;
 	transform: scale(1.1);
 	transition: all 0.3s ease-in-out;
 }
-.section-offers .cta a:nth-of-type(2):hover{
+section.offers .cta a:nth-of-type(2):hover{
 	background-image: url(../images/play-store-green.png);
 	background-repeat: no-repeat;
 	transform: scale(1.1);
 	transition: all 0.3s ease-in-out;
 }
-.section-products{
+section.products{
 	margin: 0px auto;
 	text-align: center;
 }
-.section-products .cards{
+section.products .cards{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 }
-.section-products .cards .card{
-	width: 270px;
+section.products .cards .card{
+	max-width: 270px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 	margin: 50px 0px;
 }
-.section-products .cards .card:hover{
+section.products .cards .card:hover{
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
-.section-products .cards .card .image{
+section.products .cards .card .img{
 	overflow: hidden;
 }
-.section-products .cards .card .image img{
+section.products .cards .card img{
 	width: 100%;
+	height: auto;
 	transition: all 0.3s ease-in-out;
-	max-height: 270px;
 }
-.section-products .cards .card .image img:hover{
+section.products .cards .card:hover > .img img{
 	transform: scale(1.2);
 	transition: all 0.3s ease-in-out;
 }
-  .section-products .cards .card .container{
+section.products .cards .card .container{
 	border-top: 2px solid #ececec;
 	border-right: 2px solid #ececec;
 	border-left: 2px solid #ececec;
 	border-bottom: none;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: space-between;
   }
-  .section-products .cards .card .container div{
+  section.products .cards .card .container{
+	border-top: 2px solid #ececec;
+	border-right: 2px solid #ececec;
+	border-left: 2px solid #ececec;
+	border-bottom: none;
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: space-between;
+  }
+  section.products .cards .card .container .title{
 	width: 130px;
 	margin: 0px;
   }
-  .section-products .cards .card .container div:nth-of-type(2){
+  section.products .cards .card .container .stars{
 	color: var(--Light-Green);
 	padding-top: 25px;
   }
-.section-products .cards .card .container div p .price{
+	section.products .cards .card .container .title p .price{
 	color: grey;
 	font-size: 12px;
 	padding: 10px 0px;
   }
-  .section-products .cards .card .cta{
+  section.products .cards .card .cta{
 	margin: 0px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
   }
-.section-products .cards .card .cta a{
+	section.products .cards .card .cta a{
 	flex: 1;
 	margin: 0px;
 	padding: 10px 0px;
@@ -303,26 +323,26 @@ header a:nth-of-type(2):hover{
 	text-align: center;
 	border-radius: 0px;
   }
-  .section-products .cards .card .cta a:nth-of-type(1){
+  section.products .cards .card .cta a:nth-of-type(1){
 	border-right: none;
 }
-.section-products .cards .card .cta a:hover{
+	section.products .cards .card .cta a:hover{
 	background-color: var(--Light-Green);
 	color: white;
 	border: 3px solid var(--Light-Green);
 	transition: all 0.3s ease-in-out;
   }
- .section-products .cards .card .cta a:nth-of-type(1):hover{
+ 	section.nproducts .cards .card .cta a:nth-of-type(1):hover{
 	border-right: none;
 }
-.section-cart{
+	section.cart{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	background-color: #f0f0f0;
+	background-color: #F4F4F4;
 	padding: 50px 0px;
 }
-.section-cart .cta a{
+	section.cart .cta a{
 	margin: 0px;
 	padding: 10px 20px;
 	display: inline-block;
@@ -330,16 +350,16 @@ header a:nth-of-type(2):hover{
 	font-weight: bold;
 	background-color: var(--Light-Green);
 	border: 3px solid var(--Light-Green);
-	box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 1px 1px rgba(0,0,0,0.24);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	color: white;
 	transition: all 0.3s ease-in-out;
 	text-align: center;
 	border-radius: 5px;
 }
-.section-cart .cta a:hover{
+	section.cart .cta a:hover{
 	background-color: transparent;
-	color: #8a8a8a;
-	border: 3px solid #8a8a8a;
+	color: #6d6d6d;
+	border: 3px solid #e6e6e6;
 	transition: all 0.3s ease-in-out;
 }
 footer{
